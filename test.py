@@ -61,8 +61,8 @@ def futbol():
     result = iyi_sonuc / (iyi_sonuc + kotu_sonuc)
     return result
 sonuc = []
-x_axis = 500
-y_axis = 500
+x_axis = 1000
+y_axis = 1000
 for i in range(y_axis):
 
     sonuc.append(futbol())
@@ -72,7 +72,8 @@ sorted_sonuc = sorted(sonuc)
 X = range(x_axis)
 
 Y = sonuc
-plt.plot(X, Y)
+plt.scatter(X, Y, color="red", linewidth=1.0, )
+plt.plot(X, Y, color="blue", linewidth=1.0, )
 plt.xlabel("Deneme Sayısı")
 plt.ylabel("Başarı Oranı")
 plt.xlim(1,100)
